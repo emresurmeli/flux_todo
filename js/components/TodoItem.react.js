@@ -65,6 +65,7 @@ var TodoItem = React.createClass({
             {todo.text}
           </label>
           <button className="destroy" onClick={this._onDestroyClick} />
+          <button className="destroy" onClick={this._onDestroyClick} />
         </div>
         {input}
       </li>
@@ -91,6 +92,11 @@ var TodoItem = React.createClass({
   },
 
   _onDestroyClick: function() {
+    TodoActions.destroy(this.props.todo.id);
+  },
+
+  _onHighlightClick: function() {
+    //add a highlighting functionality, create an action for it.
     TodoActions.destroy(this.props.todo.id);
   }
 
