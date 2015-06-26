@@ -45,7 +45,6 @@ var MainSection = React.createClass({
           checked={this.props.areAllComplete ? 'checked' : ''}
         />
         <label htmlFor="toggle-all">Mark all as complete</label>
-        <label htmlFor="toggle-all">Mark as priority</label>
         <ul id="todo-list">{todos}</ul>
       </section>
     );
